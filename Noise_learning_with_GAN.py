@@ -19,9 +19,9 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 torch.set_default_tensor_type('torch.FloatTensor')
 model_name = 'generate_noise_proprecess'
-lrD = 0.0004
+lrD = 0.0001
 lrG = 0.0001
-batch_size = 16
+batch_size = 128
 restore_mode = False
 preprocess = True
 start_epoch = 0
@@ -30,7 +30,7 @@ latest_discriminator_model = "/*.pth"
 real_data_path = '/*.npy'
 
 
-train_epoch = 200
+train_epoch = 40
 train_iters = 1000
 gen_iters = 1
 critic_iters = 5
